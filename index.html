@@ -20,7 +20,7 @@
       font-size: 24px;
       padding: 15px 30px;
       border-radius: 10px;
-      background: linear-gradient(to bottom, #84af86, #FFFFFF);
+      background: linear-gradient(to bottom, #98FB98, #FFFFFF);
       color: #333;
       border: none;
       text-decoration: none;
@@ -29,13 +29,12 @@
 
     /* Hover effect for the button */
     .btn-visit-portfolio:hover {
-      background: linear-gradient(to bottom, #FFFFFF, #84af86);
+      background: linear-gradient(to bottom, #6B8E23, #FFFFFF);
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     /* Background image */
     body {
-      background-image: url('OIG1.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -49,5 +48,16 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Array of possible image file names
+    var imageNames = ['OIG1.jpg', 'OIG2.jpg', 'OIG3.jpg', 'OIG4.jpg'];
+
+    // Randomly select an image name
+    var randomImageName = imageNames[Math.floor(Math.random() * imageNames.length)];
+
+    // Set the background image using the selected image name
+    document.body.style.backgroundImage = 'url(' + randomImageName + ')';
+  </script>
 </body>
 </html>
