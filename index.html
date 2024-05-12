@@ -1,59 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/eportfolio/">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Center the button */
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    /* Style for the button */
+    .btn-visit-portfolio {
+      font-size: 24px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #84af86, #FFFFFF);
+      color: #333;
+      border: none;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio_manager_client">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    /* Hover effect for the button */
+    .btn-visit-portfolio:hover {
+      background: linear-gradient(to bottom, #FFFFFF, #84af86);
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>portfolio_manager_client</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1257938886";
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+    /* Background image */
+    body {
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 center">
+        <a href="http://86.235.199.160:6969" class="btn btn-visit-portfolio">Visit Portfolio</a>
+      </div>
+    </div>
+  </div>
+
   <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
+    // Array of possible image file names
+    var imageNames = ['OIG1.jpg', 'OIG2.jpg', 'OIG3.jpg', 'OIG4.jpg'];
+
+    // Randomly select an image name
+    var randomImageName = imageNames[Math.floor(Math.random() * imageNames.length)];
+
+    // Set the background image using the selected image name
+    document.body.style.backgroundImage = 'url(' + randomImageName + ')';
   </script>
 </body>
 </html>
